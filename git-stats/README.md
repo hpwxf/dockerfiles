@@ -18,9 +18,9 @@ $ docker run -e GIT_REPO=https://github.com/Ericsson/codechecker.git --name git-
 ```
 ```
 # Connect to localhost:8080 to view stats of current directory repository
-$ docker run -w $PWD:/data --name git-stats --rm -p 8080:8080 -d hpwxf/git-stats
+$ docker run -v $PWD:/data --name git-stats --rm -p 8080:8080 -d hpwxf/git-stats
 ```
 ```
 # Open directory git-stats/index.html to view stats of current directory repository
-$ docker run -w $PWD:/data -w $PWD/git-stats:/www --name git-stats --rm -d hpwxf/git-stats
+$ docker run -v $PWD:/data -v $PWD/git-stats:/www --name git-stats --rm -d hpwxf/git-stats
 ```
